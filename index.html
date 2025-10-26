@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório de Presença Diária</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- 1º Passo - R.P.D -->
+  <h1>Relatório de Presença Diária</h1>
+
+  <!-- 2º Passo - Cliente Randon -->
+  <div class="info">
+    <p><b>Cliente:</b> Randon - <b>Turno:</b> Matutino e Vespertino - 
+      <b>Mês:</b> <span id="mesAtual">Outubro 2025</span></p>
+    <p>Escala: 8x5<br>Turno: 1º & 2º</p>
+  </div>
+
+  <!-- 3º Passo - Botões clicáveis -->
+  <div class="controls">
+    <button onclick="adicionarFuncionario()">Adicionar Funcionário</button>
+    <button onclick="exportarCSV()">📄 Exportar CSV</button>
+    <button onclick="exportarPDF()">📄 Exportar PDF</button>
+    <button onclick="salvarLocal()">💾 Salvar Local</button>
+    <button onclick="carregarLocal()">📂 Carregar Local</button>
+    <button onclick="window.print()">🖨️ Imprimir</button>
+    <button onclick="limparTabela()">🧹 Limpar</button>
+  </div>
+
+  <!-- 4º Passo - Calendário -->
+  <div class="mes-selector">
+    <label for="mes">Escolher mês: </label>
+    <input type="month" id="mes" onchange="mudarMes()">
+  </div>
+
+  
+  <!-- 5º Passo - Legendas --><div class="legenda">
+    <input type="checkbox" checked> Clique em uma célula para alternar códigos: 
+    <span class="red">C → F → FD → FM → A → FC → (vazio)</span><br>
+    <input type="checkbox" checked> 
+    <span class="green">
+      C = Presença → F = Falta → FD = Feriado → FM = Folga Mês → 
+      A = Atestado → FC = Folga Compensada
+    </span>
+  </div>
+
+  <!-- 6º Passo - Tabela com Nomes e os Dias trabalhados -->
+  <div class="tabela-container">
+    <table id="tabelaPresenca"></table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
