@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.info {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.controls button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background-color: #155ab6;
+}
+
+.mes-selector {
+  margin: 10px;
+}
+
+.legenda {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.tabela-container {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 900px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 4px;
+  text-align: center;
+}
+
+td {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Cores automáticas */
+td.presenca { background-color: #c6f6c6; } /* Verde */
+td.falta { background-color: #f8cccc; } /* Vermelho */
+td.feriado { background-color: #fff3b0; } /* Amarelo */
+td.folga { background-color: #c7dcfa; } /* Azul */
+td.atestado { background-color: #ffd8b1; } /* Laranja */
+td.folgaCompensada { background-color: #e0b3ff; } /* Roxo */
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+  
+
